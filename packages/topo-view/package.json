@@ -1,0 +1,39 @@
+{
+  "name": "@adl/topo-view",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/topo-view.common.js",
+  "module": "dist/topo-view.esm.js",
+  "scripts": {
+    "start": "pnpm run dev",
+    "dev": "cross-env NODE_ENV=development webpack build -c webpack.config.js -w",
+    "build": "rimraf ./dist && cross-env NODE_ENV=production webpack build -c webpack.config.js",
+    "publish":"",
+    "preinstall": "npx only-allow pnpm"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.8.1",
+    "esbuild": "^0.19.2",
+    "esbuild-loader": "^4.0.2",
+    "less": "^4.2.0",
+    "less-loader": "^11.1.3",
+    "rimraf": "^5.0.1",
+    "sass": "^1.66.1",
+    "sass-loader": "^13.3.2",
+    "style-loader": "^3.3.3",
+    "terser-webpack-plugin": "^5.3.9",
+    "vue-loader": "^15.10.2",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-merge": "^5.9.0",
+    "webpack-node-externals": "^3.0.0"
+  },
+  "dependencies": {
+    "element-ui": "^2.15.14",
+    "vue": "^2"
+  }
+}
