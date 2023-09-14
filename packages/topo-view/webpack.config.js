@@ -1,18 +1,10 @@
 const path = require("path");
 const {merge} = require('webpack-merge');
 const baseConfig = require("./webpack.base");
-const { EsbuildPlugin } = require('esbuild-loader')
 const minConfig = {
   devtool: false,
   optimization:{
-    minimize: true,
-    minimizer: [
-      new EsbuildPlugin({
-        target: 'es2015',
-        sourcemap: false,
-        css: true
-      })
-    ]
+    minimize: true
   }
 }
 const esmConfig = merge(baseConfig,{
